@@ -1,17 +1,16 @@
-programa
-{
-	
-	funcao inicio()
-	{
-	  inteiro idade
+programa{
+  inclua biblioteca Util --> u
 
-          escreva("Digite sua idade: ")
-          leia(idade)
+  funcao inicio(){
+  	inteiro num
+  	inteiro ale = u.sorteia(1, 10)
 
-          se(idade >= 18){
-            escreva("É de maior.\n")
-          senao{
-            escreva("Não é maior de idade. \n")
-	  }
-	}
+  	escreva("Tente advinhar o número: ")
+  	leia(num)
+
+  	enquanto(num > ale ou num < ale){
+  	  escreva("Tente advinhar o número entre 1 a 10: ")
+  	  leia(num)
+  	}
+  }
 }
